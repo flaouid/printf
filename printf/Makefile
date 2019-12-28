@@ -1,27 +1,42 @@
-
 NAME = libftprint.a
 
-SRC = libft/...
+
+SRC = ./sources/address_flags.c\
+      	./sources/alignpr_flags.c\
+	./sources/convert_flags.c\
+	./sources/modulo_flags.c\
+	./sources/str_flags.c\
+	./sources/zero_flags.c\
+	./sources/align_flags.c\
+	./sources/check_flags.c\
+	./sources/int_flags.c\
+	./sources/specifier_flags.c\
+	./sources/width_prec_flags.c
 
 OBJ = $(SRC:.c=.o)
+LIB_OBJ = ./libft/*.o
+INCLUDES = ./printf.h
+LIB = ./libft/libft.a
 
-FLAGS = -Wall -Wextra -Werror -Iincludes
+FLAGS = -Wall -Wextra -Werror -g3
 
-all: $(NAME) includes/
+all: $(NAME)
+
+.c.o : $(SRC)
+	@(gcc -c $(FLAGS) -I $(INCLUDES) $^ -o $(^:.c=.o))
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $^
+	@(make -C libft)
+	@ar rcs $(NAME) $(OBJ) $^
 
-test: all
-	gcc main.c $(NAME) -Iincludes && ./a.out
+ex : $(NAME)
+	@(gcc $(CFLAGS) $(NAME) sources/main.c -I $(INCLUDES))
+	@(./a.out)
 
-%.o: %.c
-	@gcc $(FLAGS) -o $@ -c $<
-
-re: fclean all
-
-clean:
+clean :
 	@/bin/rm -Rf $(OBJ)
 
 fclean: clean
 	@/bin/rm -Rf $(NAME)
+
+re : fclean all
