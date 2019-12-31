@@ -19,11 +19,11 @@ int	ft_printf(const char *str, ...)
 
 	p = 0;
 	i = -1;
-	va_start(args, str)
+	va_start(args, str);
 	while (str[++i] != '\0')
 	{
 		if (str[i] == '%')
-			check_flags(&i, str, args, &p)
+			check_flags(&i, str, args, &p);
 		else
 			write(1, &str[i], 1);
 	}

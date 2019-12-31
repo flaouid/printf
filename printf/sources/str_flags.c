@@ -1,14 +1,14 @@
-#include "printf.h"
+#include "../includes/printf.h"
 
 /*Flags pour chaine de caractères
  * %s sorties dans str_flags
- * %c sortie dans char_flags */ 
+ * %c sortie dans char_flags */
 
 void	char_flags(va_list args, int *i)
 {
 	char output;
 
-	output = (char)va_arg(args, int)
+	output = (char)va_arg(args, int);
 	*i = *i + 1;
 	ft_putchar(output);
 }
@@ -19,10 +19,10 @@ void	str_flags(va_list args, int *i)
 
 	output = va_arg(args, char*);
 	if (output != NULL)
-		ft_putstr(output, i);
+		ft_putstr_pf(output, i);
 	else
 	{
-		*i = i* + 6;
+		*i = *i + 6;
 		write(1, "(null)", 6);
 	}
 }

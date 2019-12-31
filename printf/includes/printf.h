@@ -19,7 +19,8 @@ typedef struct	s_params
 	int	precision;
 }		t_params;
 
-void	check_flags(int *i, const char *str, va_list args, int *p);
+void	check_flags_sp(int *i, const char *str, va_list args, int *p);
+void	check_flags(va_list args, const char *str, int *i);
 
 void	check_rightalign(int *i, const char *str, va_list args, int *p);
 void	check_leftalign(int *i, const char *str, va_list args, int *p);
@@ -44,6 +45,8 @@ void	str_flags(va_list args, int *i);
 
 void	whitespace_flags(va_list, int *p, const char *str, int *i);
 void	add_plus(int *i);
-int	width_prec_flags(t_params *params, const char *str, unsigned int i);
+void	plus_flags(va_list args, int *p, const char *str, int *i);
+int		width_prec_flags(t_params *args, const char *str, unsigned int i);
+void	check_zero(int *i, const char *str, va_list args, int *p);
 
 #endif

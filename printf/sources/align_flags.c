@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "../includes/printf.h"
 
 /*handles width field*/
 
@@ -29,7 +29,7 @@ void	align_address_flags(const char *str, void *check, int *i, int *p)
 		ft_putspace(f_align, 1, p);
 		*p = *p + 1;
 		if (str[*i] == 'c')
-			ft_putchar((char)check):
+			ft_putchar((char)check);
 		else
 			write(1, "%", 1);
 	}
@@ -60,7 +60,7 @@ void	align_flag(const char *str, va_list args, int *i, int *p)
 	}
 	else if (str[*i] == 's')
 	{
-		ft_putspace(f_align, ft_strlen((char*)check, p);
+		ft_putspace(f_align, ft_strlen((char*)check), p);
 		ft_putstr_pf((char*)check, p);
 	}
 	else
@@ -94,7 +94,7 @@ void	check_leftalign(int *i, const char *str, va_list args, int *p)
 	while (str[*i] >= '0' && str[*i] <= '9')
 	{
 		f_align = f_align * 10 + (str[*i] - '0');
-		i* = *i + 1;
+		*i = *i + 1;
 	}
 	*i = *i - 1;
 	check_flags(i, str, args, p);

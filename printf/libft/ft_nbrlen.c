@@ -8,9 +8,9 @@ int	ft_nbrlen(int nbr)
 
 	i = 0;
 
-	while (n != 0)
+	while (nbr != 0)
 	{
-		n = n / 10;
+		nbr = nbr / 10;
 		i++;
 	}
 	return (i);

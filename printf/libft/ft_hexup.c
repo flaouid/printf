@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	ft_hexup(unsigned int n, int *p)
+void	ft_hexup(unsigned int n, int *i)
 {
 	if (n > 15)
 	{

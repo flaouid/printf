@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "../includes/printf.h"
 
 void	mod_flags(int *i)
 {
@@ -12,8 +12,8 @@ void	mem_add_flags(va_list args, int *i)
 	unsigned long address;
 
 	output = va_arg(args, void*);
-	adress = (unsigned long)(output);
+	address = (unsigned long)(output);
 	write(1, "0x", 2);
 	*i = *i + 2;
-	ft_adress(address, i);
+	ft_putaddress(address, i);
 }

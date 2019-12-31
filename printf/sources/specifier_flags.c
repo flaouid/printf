@@ -1,8 +1,8 @@
-#include "printf.h"
+#include "../includes/printf.h"
 
 /* Gère les espaces, les + et les hashtags*/
 
-void	whitespace_flags(va_list, int *p, const char *str, int *i)
+void	whitespace_flags(va_list args, int *p, const char *str, int *i)
 {
 	int output;
 
@@ -53,7 +53,7 @@ void	plus_flags(va_list args, int *p, const char *str, int *i)
 		check_flags(i, str, args, p);
 }
 
-void	hashtag_flags(va_list, args, int *p, const char *str, int *i)
+void	hashtag_flags(va_list args, int *p, const char *str, int *i)
 {
 	unsigned int output;
 

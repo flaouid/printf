@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "../includes/printf.h"
 
 /* Gère le cas du Zero. */
 
@@ -14,7 +14,7 @@ void	ft_putspacezero(int s, int size, int *i)
 		count = s - size;
 		while (--count >= 0)
 		{
-			write(1, "0", 1):
+			write(1, "0", 1);
 			*i = *i + 1;
 		}
 	}
@@ -27,7 +27,7 @@ void	ralignzero_flag(const char *str, va_list args, int *i, int *p)
 	check = va_arg(args, void*);
 	if (str[*i] == 'd' || str[*i] == 'i')
 	{
-		ft_putspacezero(pf_alignz, ft_numlen((int)check), p);
+		ft_putspacezero(pf_alignz, ft_nbrlen((int)check), p);
 		ft_putnbr_pf((int)check, p);
 	}
 }
@@ -63,7 +63,7 @@ void	pralignzero_flag(const char *str, va_list args, int *i, int *p)
 	pf_alignz = pf_alignz - 1;
 	if (str[*i] == 'd' || str[*i] == 'i')
 	{
-		ft_putspacezero(pf_alignz, ft_nbrlen((int)check, p);
+		ft_putspacezero(pf_alignz, ft_nbrlen((int)check), p);
 		ft_putnbr_pf((int)check, p);
 	}
 }

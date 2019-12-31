@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "../includes/printf.h"
 
 int	isparameter(const char *str)
 {
@@ -49,4 +49,4 @@ unsigned int	convert_flags(const char *str)
 			i = i + 1;
 	}
 	return (check_last_char(str, i));
-}	
+}

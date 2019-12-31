@@ -9,7 +9,7 @@ void	ft_hex(unsigned int n, int *i)
 	}
 	else if (n < 10)
 	{
-		*i = *p + 1;
+		*i = *i + 1;
 		ft_putchar(n + '0');
 	}
 	else
