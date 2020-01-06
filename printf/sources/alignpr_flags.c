@@ -60,7 +60,7 @@ void	rpalign_flags(const char *str, va_list args, int *i, int *p)
 	else if (str[*i] == 's')
 	{
 		ft_putspacepr(pf_align, ft_strlen((char*)check), p);
-		ft_putstr_pf((char*)check, p); 
+		ft_putstr_pf((char*)check, p);
 	}
 	else
 		pr_align_address_flags(str, check, i, p);
@@ -95,7 +95,7 @@ void	check_leftpalign(int *i, const char *str, va_list args, int *p)
 	*i = *i - 1;
 	*p = *p + 1;
 	write(1, "+", 1);
-	check_flags(i, str, args, p);
+	check_flags(args, str, i, p);
 	if (pf_align > (*p - count))
 	{
 		check = pf_align - (*p - count);
@@ -106,4 +106,3 @@ void	check_leftpalign(int *i, const char *str, va_list args, int *p)
 		}
 	}
 }
-

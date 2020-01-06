@@ -97,7 +97,7 @@ void	check_leftalign(int *i, const char *str, va_list args, int *p)
 		*i = *i + 1;
 	}
 	*i = *i - 1;
-	check_flags(i, str, args, p);
+	check_flags(args, str, i, p);
 	if (f_align > (*p - count))
 	{
 		check = f_align - (*p - count);

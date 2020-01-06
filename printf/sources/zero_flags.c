@@ -82,4 +82,3 @@ void	check_pr_zero(int *i, const char *str, va_list args, int *p)
 	}
 	pralignzero_flag(str, args, i, p);
 }
-

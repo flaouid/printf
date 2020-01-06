@@ -1,4 +1,5 @@
 #include "../includes/printf.h"
+#include "../libft/libft.h"
 
 void	mod_flags(int *i)
 {
