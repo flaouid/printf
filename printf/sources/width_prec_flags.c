@@ -16,5 +16,5 @@ int	width_prec_flags(t_params *args, const char *str, int *i)
 		args->is_precision_in_arg = 1;
 	else if (str[*i] == '.')
 		args->precision = ft_atoi(str + *i + 1);
-	return (i);
+	return (*i);
 }

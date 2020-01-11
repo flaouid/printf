@@ -23,10 +23,11 @@ int	ft_printf(const char *str, ...)
 	while (str[++i] != '\0')
 	{
 		if (str[i] == '%')
-			check_flags(&i, str, args, &p);
+			check_flags(args, str, &i, &p);
 		else
 			write(1, &str[i], 1);
 	}
 	va_end(args);
 	return (p);
 }
+

@@ -1,4 +1,4 @@
-include "libft.h"
+#include "libft.h"
 
 char		*ft_strdup(char *src)
 {
@@ -12,7 +12,7 @@ char		*ft_strdup(char *src)
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
-		i++;					
+		i++;
 	}
 	dest[i] = '\0';
 	if (dest != '\0')

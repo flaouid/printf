@@ -18,7 +18,7 @@ void	whitespace_flags(va_list args, int *p, const char *str, int *i)
 		ft_putnbr_pf(output, p);
 	}
 	else
-		check_flags(i, str, args, p);
+		check_flags(args, str, i, p);
 }
 
 void	add_plus(int *i)
@@ -43,14 +43,14 @@ void	plus_flags(va_list args, int *p, const char *str, int *i)
 	{
 		add_plus(i);
 		*i = *i + 1;
-		check_pzero(i, str, args, p);
+		check_pr_zero(i, str, args, p);
 	}
 	else if (str[*i + 1] == '-')
 		check_leftpalign(i, str, args, p);
 	else if (str[*i + 1] > '0' || str[*i + 1] <= '9')
 		check_rightpalign(i, str, args, p);
 	else
-		check_flags(i, str, args, p);
+		check_flags(args, str, i, p);
 }
 
 void	hashtag_flags(va_list args, int *p, const char *str, int *i)
@@ -63,24 +63,24 @@ void	hashtag_flags(va_list args, int *p, const char *str, int *i)
 		output = va_arg(args, unsigned int);
 		*p = *p + 1;
 		write(1, "0", 1);
-		if (output != 0);
+		if (output != 0)
 			ft_oct(output, p);
 	}
 	else if (str[*i + 1] == 'x')
 	{
 		*p = *p + 2;
 		write(1, "0x", 2);
-		check_flags(i, str, args, p);
+		check_flags(args, str, i, p);
 	}
 	else if (str[*i + 1] == 'X')
 	{
 		*p = *p + 2;
 		write(1, "0X", 2);
-		check_flags(i, str, args, p);
+		check_flags(args, str, i, p);
 	}
 }
 
-void	dot_flags(va_list args, int *p, const char *str, int *i)
+void	dot_flags(const char *str, int *i)
 {
 	if (str[*i] == '.')
 	{

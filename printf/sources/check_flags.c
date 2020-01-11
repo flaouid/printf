@@ -11,8 +11,8 @@ void	check_flags_sp(int *i, const char *str, va_list args, int *p)
 	str[*i] > '0' && str[*i] <= '9' ? check_rightalign(i, str, args, p) : 0;
 	str[*i] == '-' ? check_leftalign(i, str, args, p) : 0;
 	str[*i] == ' ' ? whitespace_flags(args, p, str, i) : 0;
-	str[*i] == '*' ? width_prec_flags(args, str, i) : 0;
-	str[*i] == '.' ? width_prec_flags(args, str, i) : 0;
+	//str[*i] == '*' ? width_prec_flags(args, str, i) : 0;
+	//str[*i] == '.' ? width_prec_flags(args, str, i) : 0;
 }
 
 void	check_flags(va_list args, const char *str, int *i, int *p)
@@ -29,7 +29,4 @@ void	check_flags(va_list args, const char *str, int *i, int *p)
 	str[*i] == 's' ? str_flags(args, p) : 0;
 }
 
-t_params *setup_param(char *str, va_list args, int *i, int *p)
-{
-
-}
+//t_params *setup_param(char *str, va_list args, int *i, int *p)

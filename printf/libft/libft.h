@@ -5,11 +5,11 @@
 # include <unistd.h>
 # include <stdio.h>
 
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	ft_hex(unsigned int n, int *i);
-void	ft_hexup(unsigned int, int *p);
+void	ft_hexup(unsigned int n, int *i);
 char	*ft_itoa(int n);
-int	ft_nbrlen(int nbr);
+int		ft_nbrlen(int nbr);
 void	ft_oct(unsigned int n, int *i);
 void	ft_putaddress(unsigned long n, int *i);
 void	ft_putchar(char c);
