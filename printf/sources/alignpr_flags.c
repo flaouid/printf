@@ -68,6 +68,9 @@ void	rpalign_flags(const char *str, va_list args, int *i, int *p)
 
 void	check_rightpalign(int *i, const char *str, va_list args, int *p)
 {
+	int count;
+	
+	count = *p;
 	pf_align = 0;
 	while (str[*i] >= '0' && str[*i] <= '9')
 	{

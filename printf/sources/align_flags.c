@@ -55,7 +55,7 @@ void	align_flag(const char *str, va_list args, int *i, int *p)
 	}
 	else if (str[*i] == 'u' || str[*i] == 'o' || str[*i] == 'x' || str[*i] == 'X')
 	{
-		ft_putspace(f_align, ft_nbrlen((unsigned int)check), p);
+		ft_putspace(f_align, ft_nbrulen((unsigned int)check), p);
 		ft_putnbr_pf((unsigned int)check, p);
 	}
 	else if (str[*i] == 's')

@@ -28,10 +28,12 @@ SRC = ./sources/ft_printf.c\
 	./libft/ft_strdup.c\
 	./libft/ft_strjoin.c\
 	./libft/ft_strlen.c\
-	./libft/ft_hexup.c
+	./libft/ft_hexup.c\
+	./libft/ft_nbrulen.c\
+
 OBJ = $(SRC:.c=.o)
 LIB_OBJ = ./libft/*.o
-INCLUDES = ./includes/printf.h
+INCLUDES = ../includes/printf.h
 LIB = ./libft/libft.a
 
 FLAGS = -Wall -Wextra -Werror -g3

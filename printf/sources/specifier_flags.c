@@ -21,9 +21,9 @@ void	whitespace_flags(va_list args, int *p, const char *str, int *i)
 		check_flags(args, str, i, p);
 }
 
-void	add_plus(int *i)
+void	add_plus(int *p)
 {
-	*i = *i + 1;
+	*p = *p + 1;
 	write(1, "+", 1);
 }
 
@@ -35,13 +35,13 @@ void	plus_flags(va_list args, int *p, const char *str, int *i)
 	{
 		output = va_arg(args, int);
 		if (output >= 0)
-			add_plus(i);
+			add_plus(p);
 		*i = *i + 1;
 		ft_putnbr_pf(output, p);
 	}
 	else if (str[*i + 1] == '0')
 	{
-		add_plus(i);
+		add_plus(p);
 		*i = *i + 1;
 		check_pr_zero(i, str, args, p);
 	}

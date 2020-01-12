@@ -37,8 +37,8 @@ void	flags_unint(va_list args, int *i)
 
 void	flags_int(va_list args, int *i)
 {
-	unsigned int output;
+	int output;
 
 	output = va_arg(args, int);
-	ft_putnbri(output, i);
+	ft_putnbr_pf(output, i);
 }
