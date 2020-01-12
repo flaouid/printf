@@ -1,20 +1,13 @@
 #include "../includes/printf.h"
 
-int	width_prec_flags(t_params *args, const char *str, int *i)
+int	width_bref(va_list args, const char *str, int *i, int *p)
 {
-	if (str[*i] >= '0' && str[*i] <= '9')
-		args->width = ft_atoi(str + *i);
-	while (str[*i] >= '0' && str[*i] <= '9')
-		*i = *i + 1;
-	if (str[*i] == '*')
-		args->is_width_in_arg = 1;
-	if (str[*i] == '*')
-		*i = *i + 1;
+	unsigned int output;
+
 	if (str[*i] == '.')
-		args->is_precision = 1;
-	if (str[*i] == '.' && str[*i + 1] == '*')
-		args->is_precision_in_arg = 1;
-	else if (str[*i] == '.')
-		args->precision = ft_atoi(str + *i + 1);
-	return (*i);
-}
+	{
+		*i = *i + 1;
+		output = va_arg(args, unsigned int);
+		*p = *p + 1;
+		is_digit(........);
+
