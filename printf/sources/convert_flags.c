@@ -18,9 +18,7 @@ unsigned int	check_last_char(const char *str, unsigned int i)
 {
 	if (i == 0 && str[1] == '$')
 		return (0);
-	if (str[i] == 'c' || str[i] == 's' || str[i] == 'd' || str[i] == 'i'
-		|| str[i] == 'u' || str[i] == 'x' || str[i] == 'x' || str[i] == 'X'
-		|| str[i] == '%')
+	if (str[i] == 'c' || str[i] == 's' || str[i] == 'd' || str[i] == 'i' || str[i] == 'u' || str[i] == 'x' || str[i] == 'x' || str[i] == 'X' || str[i] == '%')
 		return (i);
 	return (0);
 }

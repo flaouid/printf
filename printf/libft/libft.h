@@ -9,6 +9,7 @@ int		ft_atoi(const char *str);
 void	ft_hex(unsigned int n, int *i);
 void	ft_hexup(unsigned int n, int *i);
 char	*ft_itoa(int n);
+int		ft_isdigit(int c);
 int		ft_nbrlen(int nbr);
 void	ft_oct(unsigned int n, int *i);
 void	ft_putaddress(unsigned long n, int *i);
@@ -22,6 +23,7 @@ char	*ft_strdup(char *src);
 //static void	*ft_strcpy(char *dst, const char *src);
 char	*ft_strjoin(const char *separator, const char *s2);
 size_t	ft_strlen(const char *s);
+size_t	ft_nbrulen(unsigned int n);
 
 
 

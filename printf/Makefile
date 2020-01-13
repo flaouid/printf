@@ -30,6 +30,7 @@ SRC = ./sources/ft_printf.c\
 	./libft/ft_strlen.c\
 	./libft/ft_hexup.c\
 	./libft/ft_nbrulen.c\
+	./libft/ft_isdigit.c
 
 OBJ = $(SRC:.c=.o)
 LIB_OBJ = ./libft/*.o
@@ -45,6 +46,10 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ) $^
+
+ex : $(NAME)
+	@(gcc -Wall -Wextra -Werror -fsanitize=address main.c libftprintf.a)
+	@(./a.out)
 
 clean :
 	@/bin/rm -Rf $(OBJ)

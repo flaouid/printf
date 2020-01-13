@@ -1,6 +1,7 @@
 #include "../includes/printf.h"
+#include "../libft/libft.h"
 
-int	width_bref(va_list args, const char *str, int *i, int *p)
+void	width_bref(va_list args, const char *str, int *i, int *p)
 {
 	unsigned int output;
 
@@ -9,5 +10,7 @@ int	width_bref(va_list args, const char *str, int *i, int *p)
 		*i = *i + 1;
 		output = va_arg(args, unsigned int);
 		*p = *p + 1;
-		is_digit(........);
-
+		write(1, ".", 1);
+		ft_isdigit(*p);
+	}
+}

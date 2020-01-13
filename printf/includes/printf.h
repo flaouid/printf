@@ -9,6 +9,7 @@
 # include <inttypes.h>
 
 # include "../libft/libft.h"
+# include "../includes/printf.h"
 
 typedef struct	s_params
 {
@@ -50,6 +51,9 @@ int		width_prec_flags(t_params *args, const char *str, int *i);
 void	check_zero(int *i, const char *str, va_list args, int *p);
 void	mod_flags(int *i);
 void	mem_add_flags(va_list args, int *i);
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
+void	hashtag_flags(va_list args, int *p, const char *str, int *i);
+void	dot_flags(const char *str, int *i);
+void		width_bref(va_list args, const char *str, int *i, int *p);
 
 #endif

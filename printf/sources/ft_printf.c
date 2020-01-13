@@ -1,4 +1,5 @@
 #include "../includes/printf.h"
+#include "../libft/libft.h"
 
 /*
  * ** • This function will use a ellipsis prototype to grab the initial input
@@ -30,4 +31,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (p);
 }
-

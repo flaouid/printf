@@ -7,7 +7,7 @@ void	flags_hexupp(va_list args, int *i)
 {
 	unsigned int output;
 
-	output = *(va_arg(args, unsigned int*));
+	output = va_arg(args, unsigned int);
 	ft_hexup(output, i);
 }
 
@@ -15,7 +15,7 @@ void	flags_hex(va_list args, int *i)
 {
 	unsigned int output;
 
-	output = *(va_arg(args, unsigned int*));
+	output = va_arg(args, unsigned int);
 	ft_hex(output, i);
 }
 
@@ -31,7 +31,7 @@ void	flags_unint(va_list args, int *i)
 {
 	unsigned int output;
 
-	output = *(va_arg(args, unsigned int*));
+	output = va_arg(args, unsigned int);
 	ft_putnbruni(output, i);
 }
 

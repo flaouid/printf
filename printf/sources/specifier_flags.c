@@ -68,7 +68,7 @@ void	hashtag_flags(va_list args, int *p, const char *str, int *i)
 	}
 	else if (str[*i + 1] == 'x')
 	{
-		*p = *p + 2;
+		*i = *i + 2;
 		write(1, "0x", 2);
 		check_flags(args, str, i, p);
 	}

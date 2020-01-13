@@ -54,7 +54,7 @@ void	rpalign_flags(const char *str, va_list args, int *i, int *p)
 	}
 	else if (str[*i] == 'u' || str[*i] == 'o' || str[*i] == 'x' || str[*i] == 'X')
 	{
-		ft_putspacepr(pf_align, ft_nbrlen((int)check), p);
+		ft_putspacepr(pf_align, ft_nbrulen((int)check), p);
 		ft_putnbr_pf((unsigned int)check, p);
 	}
 	else if (str[*i] == 's')
@@ -69,7 +69,7 @@ void	rpalign_flags(const char *str, va_list args, int *i, int *p)
 void	check_rightpalign(int *i, const char *str, va_list args, int *p)
 {
 	int count;
-	
+
 	count = *p;
 	pf_align = 0;
 	while (str[*i] >= '0' && str[*i] <= '9')
