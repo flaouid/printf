@@ -18,7 +18,10 @@ void	whitespace_flags(va_list args, int *p, const char *str, int *i)
 		ft_putnbr_pf(output, p);
 	}
 	else
+	{
 		check_flags(args, str, i, p);
+		check_flags_sp(i, str, args, p);
+	}
 }
 
 void	add_plus(int *p)

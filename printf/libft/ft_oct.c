@@ -9,7 +9,7 @@ void	ft_oct(unsigned int n, int *i)
 	}
 	else
 	{
-		*i = *i + 1;
+		*i = *i + (n / 8);
 		ft_putchar(n + '0');
 	}
 }

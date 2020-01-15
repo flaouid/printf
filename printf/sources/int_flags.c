@@ -23,7 +23,7 @@ void	flags_oct(va_list args, int *i)
 {
 	unsigned int output;
 
-	output = *(va_arg(args, unsigned int*));
+	output = va_arg(args, unsigned int);
 	ft_oct(output, i);
 }
 
@@ -40,5 +40,5 @@ void	flags_int(va_list args, int *i)
 	int output;
 
 	output = va_arg(args, int);
-	ft_putnbr_pf(output, i);
+	ft_putnbri(output, i);
 }
