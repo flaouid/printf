@@ -1,11 +1,12 @@
-#include "printf.h"
+#include "../includes/printf.h"
+#include "../libft/libft.h"
 
 void	flags_hexhhup(va_list args, int *p)
 {
 	unsigned char output;
 
 	output = (unsigned char)va_arg(args, void*);
-	ft_hexupp((unsigned int)output, p);
+	ft_hexup((unsigned int)output, p);
 }
 
 void	flags_hexhh(va_list args, int *p)

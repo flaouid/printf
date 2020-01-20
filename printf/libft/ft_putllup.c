@@ -1,6 +1,7 @@
-#include "libft.h"
+#include "../libft/libft.h"
+#include "../includes/printf.h"
 
-void	ft_putllup(unsigned long long ,, int *p)
+void	ft_putllup(unsigned long long n, int *p)
 {
 	if (n >= 10)
 	{

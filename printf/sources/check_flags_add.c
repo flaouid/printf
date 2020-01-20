@@ -1,6 +1,7 @@
-#include "printf.h"
+#include "../includes/printf.h"
+#include "../libft/libft.h"
 
-void	parse_ll(va_list args, int *p, const char *str, int *i)
+void	check_ll(va_list args, int *p, const char *str, int *i)
 {
 	*i = *i + 2;
 	str[*i] == 'd' ? flags_intll(args, p) : 0;
@@ -11,7 +12,7 @@ void	parse_ll(va_list args, int *p, const char *str, int *i)
 	str[*i] == 'X' ? flags_hexllup(args, p) : 0;
 }
 
-void	parse_l(va_list args, int *p, const char *str, int *i)
+void	check_l(va_list args, int *p, const char *str, int *i)
 {
 	*i = *i + 1;
 	str[*i] == 'd' ? flags_intl(args, p) : 0;
@@ -25,5 +26,7 @@ void	parse_l(va_list args, int *p, const char *str, int *i)
 		*i = *i - 1;
 		str[*i] == 'D' ? flags_intl(args, p) : 0;
 		str[*i] == 'U' ? flags_intlup(args, p) : 0;
-		str[*i] == 'O' ? flags_octl(args, p) : 0;									}
+		str[*i] == 'O' ? flags_octl(args, p) : 0;
+	}
+	check_flags(args, str, i, p);
 }

@@ -1,4 +1,5 @@
-#include "libft.h"
+#include "../libft/libft.h"
+#include "../includes/printf.h"
 
 void	ft_putld(long n, int *p)
 {

@@ -13,7 +13,7 @@ void	address_flags(va_list args, int *i)
 	address = (unsigned long)(output);
 	write(1, "0x", 2);
 	*i = *i + 2;
-	ft_putaddress(address, p);
+	ft_putaddress(address, i);
 }
 
 void	percent_flags(int *i)
@@ -21,3 +21,4 @@ void	percent_flags(int *i)
 	*i = *i + 1;
 	write(1, "%", 1);
 }
+

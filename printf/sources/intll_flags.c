@@ -1,6 +1,7 @@
-#include "printf.h"
+#include "../includes/printf.h"
+#include "../libft/libft.h"
 
-void	flags_uhexll(va_list args, int *p)
+void	flags_hexllup(va_list args, int *p)
 {
 	unsigned long long output;
 
@@ -24,12 +25,12 @@ void	flags_octll(va_list args, int *p)
 	ft_oct((unsigned int)output, p);
 }
 
-void	flags_uintll(va_list args, int *p)
+void	flags_intllup(va_list args, int *p)
 {
 	unsigned long long output;
 
 	output = (unsigned long long)va_arg(args, void*);
-	ft_pullup((unsigned long long)output, p);
+	ft_putllup((unsigned long long)output, p);
 }
 
 void	flags_intll(va_list args, int *p)

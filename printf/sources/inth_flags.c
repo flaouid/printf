@@ -1,4 +1,5 @@
-#include "printf.h"
+#include "../includes/printf.h"
+#include "../libft/libft.h"
 
 // Gère les conversion en h
 
@@ -7,7 +8,7 @@ void	flags_hexhup(va_list args, int *p)
 	unsigned short output;
 
 	output = (unsigned short)va_arg(args, void*);
-	ft_hexupp((unsigned int) output, p);
+	ft_hexup((unsigned int) output, p);
 }
 
 void	flags_hexh(va_list args, int *p)
@@ -22,7 +23,7 @@ void	flags_octh(va_list args, int *p)
 {
 	unsigned short output;
 
-	output = (unsigned short)va_arg(args, void*)
+	output = (unsigned short)va_arg(args, void*);
 	ft_oct((unsigned int)output, p);
 }
 

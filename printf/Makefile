@@ -1,17 +1,20 @@
 NAME = libftprintf.a
 
-
 SRC = ./sources/ft_printf.c\
-./sources/address_flags.c\
-      ./sources/alignpr_flags.c\
+	./sources/address_flags.c\
+	./sources/alignpr_flags.c\
 	./sources/convert_flags.c\
-	./sources/modulo_flags.c\
 	./sources/str_flags.c\
 	./sources/zero_flags.c\
 	./sources/align_flags.c\
 	./sources/check_flags.c\
 	./sources/int_flags.c\
+	./sources/inth_flags.c\
+	./sources/inthh_flags.c\
+	./sources/intl_flags.c\
+	./sources/intll_flags.c\
 	./sources/specifier_flags.c\
+	./sources/check_flags_add.c\
 	./sources/width_prec_flags.c\
 	./libft/ft_atoi.c\
 	./libft/ft_hex.c\
@@ -21,6 +24,8 @@ SRC = ./sources/ft_printf.c\
 	./libft/ft_putaddress.c\
 	./libft/ft_putchar_fd.c\
 	./libft/ft_putchar.c\
+	./libft/ft_putld.c\
+	./libft/ft_putllup.c\
 	./libft/ft_putnbr_pf.c\
 	./libft/ft_putnbri.c\
 	./libft/ft_putnbruni.c\
@@ -30,7 +35,7 @@ SRC = ./sources/ft_printf.c\
 	./libft/ft_strlen.c\
 	./libft/ft_hexup.c\
 	./libft/ft_nbrulen.c\
-	./libft/ft_isdigit.c
+	./libft/ft_isdigit.c\
 
 OBJ = $(SRC:.c=.o)
 LIB_OBJ = ./libft/*.o
@@ -45,7 +50,7 @@ all: $(NAME)
 	@(gcc -c $(FLAGS) -I $(INCLUDES) $^ -o $(^:.c=.o))
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ) $^
+	@ar rcs $(NAME) $(OBJ)
 
 ex : $(NAME)
 	@(gcc -Wall -Wextra -Werror -g3 -fsanitize=address main.c libftprintf.a)

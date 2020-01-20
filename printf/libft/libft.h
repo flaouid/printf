@@ -4,6 +4,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include "../includes/printf.h"
+# include "../libft/libft.h"
 
 int		ft_atoi(const char *str);
 void	ft_hex(unsigned int n, int *i);
@@ -24,6 +26,9 @@ char	*ft_strdup(char *src);
 char	*ft_strjoin(const char *separator, const char *s2);
 size_t	ft_strlen(const char *s);
 size_t	ft_nbrulen(unsigned int n);
+void	ft_putld(long n, int *p);
+void	ft_putllup(unsigned long long n, int *p);
+
 
 
 
