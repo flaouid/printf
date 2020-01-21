@@ -18,11 +18,11 @@ void	str_flags(va_list args, int *i)
 	char *output;
 
 	output = va_arg(args, char*);
-	if (output != NULL)
-		ft_putstr_pf(output, i);
-	else
+	if (output == NULL)
 	{
 		*i = *i + 6;
 		write(1, "(null)", 6);
 	}
+	if (output != NULL)
+		ft_putstr_pf(output, i);
 }

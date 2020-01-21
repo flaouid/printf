@@ -10,6 +10,7 @@ void	check_ll(va_list args, int *p, const char *str, int *i)
 	str[*i] == 'o' ? flags_octll(args, p) : 0;
 	str[*i] == 'x' ? flags_hexll(args, p) : 0;
 	str[*i] == 'X' ? flags_hexllup(args, p) : 0;
+	check_flags(args, str, i, p);
 }
 
 void	check_l(va_list args, int *p, const char *str, int *i)

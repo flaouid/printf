@@ -6,7 +6,7 @@
 /*   By: flaouid <laouid.ferdaous@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 10:27:52 by flaouid           #+#    #+#             */
-/*   Updated: 2020/01/20 12:01:48 by flaouid          ###   ########.fr       */
+/*   Updated: 2020/01/21 15:38:20 by flaouid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	check_flags_sp(int *i, const char *str, va_list args, int *p)
 	str[*i] == ' ' ? whitespace_flags(args, p, str, i) : 0;
 	str[*i] == '#' ? hashtag_flags(args, p, str, i) : 0;
 	str[*i] == '*' ? width_bref(args, str, i, p) : 0;
-	str[*i] == '.' ? width_bref(args, str, i, p) : 0;
+	str[*i] == '.' ? dot_flags(args, str, i, p) : 0;
 	str[*i] == '+' ? plus_flags(args, p, str, i) : 0;
 }
 
@@ -74,5 +74,4 @@ void	check_flags(va_list args, const char *str, int *i, int *p)
 	str[*i] == 'l' && str[*i + 1] != 'l' ? check_l(args, p, str, i) : 0;
 	str[*i] == 'D' && str[*i + 1] == 'U' ? check_l(args, p, str, i) : 0;
 	check_flags_sp(i, str, args, p);
-
 }

@@ -82,14 +82,3 @@ void	hashtag_flags(va_list args, int *p, const char *str, int *i)
 		check_flags(args, str, i, p);
 	}
 }
-
-void	dot_flags(const char *str, int *i)
-{
-	if (str[*i] == '.')
-	{
-		*i = *i + 1;
-		ft_atoi(&str[*i]);
-	}
-	while (str[*i] && str[*i] >= '0' && str[*i] <= '9')
-		*i = *i + 1;
-}

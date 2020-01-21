@@ -3,6 +3,6 @@
 
 int main(void)
 {
-	ft_printf("%010x\n", 0);
-	printf("%010x\n", 0);
+	ft_printf("%32s\n", NULL);
+	printf("%32s\n", NULL);;
 }

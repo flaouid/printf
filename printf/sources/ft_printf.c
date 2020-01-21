@@ -20,6 +20,8 @@ int	ft_printf(const char *str, ...)
 
 	p = 0;
 	i = -1;
+	if (!str)
+		return (0);
 	va_start(args, str);
 	while (str[++i] != '\0')
 	{

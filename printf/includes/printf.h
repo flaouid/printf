@@ -70,6 +70,7 @@ void	char_flags(va_list args, int *i);
 void	str_flags(va_list args, int *i);
 
 void	whitespace_flags(va_list, int *p, const char *str, int *i);
+void	ft_putspacezero(int s, int size, int *i);
 void	add_plus(int *i);
 void	plus_flags(va_list args, int *p, const char *str, int *i);
 int		width_prec_flags(t_params *args, const char *str, int *i);
@@ -78,7 +79,7 @@ void	mod_flags(int *i);
 void	mem_add_flags(va_list args, int *i);
 int		ft_printf(const char *str, ...);
 void	hashtag_flags(va_list args, int *p, const char *str, int *i);
-void	dot_flags(const char *str, int *i);
+void	dot_flags(va_list args, const char *str, int *i, int *p);
 void	width_bref(va_list args, const char *str, int *i, int *p);
 void	check_ll(va_list args, int *p, const char *str, int *i);
 void	check_l(va_list args, int *p, const char *str, int *i);

@@ -5,6 +5,8 @@ void	ft_putstr_pf(char const *s, int *p)
 	int i;
 
 	i = -1;
+	if (!s)
+		return ;
 	while (s[++i] != '\0')
 	{
 		ft_putchar(s[i]);

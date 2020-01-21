@@ -8,6 +8,8 @@ void	ft_putspacezero(int s, int size, int *i)
 {
 	int count;
 
+	if (!size)
+		return ;
 	count = 0;
 	if (s > size)
 	{
@@ -36,6 +38,8 @@ void	check_zero(int *i, const char *str, va_list args, int *p)
 {
 	int count;
 
+	if (!str)
+		return ;
 	count = *p;
 	pf_alignz = 0;
 	if (str[*i + 1] == '+')
@@ -59,6 +63,8 @@ void	pralignzero_flag(const char *str, va_list args, int *i, int *p)
 {
 	void	*check;
 
+	if (!str)
+		return;
 	check = va_arg(args, void*);
 	pf_alignz = pf_alignz - 1;
 	if (str[*i] == 'd' || str[*i] == 'i')
@@ -72,6 +78,8 @@ void	check_pr_zero(int *i, const char *str, va_list args, int *p)
 {
 	int count;
 
+	if (!str)
+		return ;
 	count = *p;
 	pf_alignz = 0;
 	while (str[*i] >= '0' && str[*i] <= '9')

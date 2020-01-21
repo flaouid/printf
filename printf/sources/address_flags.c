@@ -18,7 +18,7 @@ void	address_flags(va_list args, int *i)
 
 void	percent_flags(int *i)
 {
-	*i = *i + 1;
-	write(1, "%", 1);
+		*i = *i + 1;
+		write(1, "%", 1);
 }
 
