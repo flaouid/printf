@@ -1,8 +1,9 @@
+#include "includes/printf.h"
 #include <stdio.h>
-#include "./includes/printf.h"
 
-int main(void)
+int main (void)
 {
-	ft_printf("%32s\n", NULL);
-	printf("%32s\n", NULL);;
+	int number    =  5;
+	printf("---%*d----\n", 6, number);
+	ft_printf("---%*d----\n", 6, number);
 }

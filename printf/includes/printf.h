@@ -11,15 +11,6 @@
 # include "../libft/libft.h"
 # include "../includes/printf.h"
 
-typedef struct	s_params
-{
-	int	width;
-	int	is_width_in_arg;
-	int	is_precision;
-	int	is_precision_in_arg;
-	int	precision;
-}		t_params;
-
 void	check_flags_sp(int *i, const char *str, va_list args, int *p);
 void	check_flags(va_list args, const char *str, int *i, int *p);
 
@@ -28,9 +19,12 @@ void	check_leftalign(int *i, const char *str, va_list args, int *p);
 
 void	check_rightpalign(int *i, const char *str, va_list args, int *p);
 void	check_leftpalign(int *i, const char *str, va_list args, int *p);
+void	rpalign_flags(const char *str, va_list args, int *i, int *p);
+void	align_flag(const char *str, va_list args, int *i, int *p);
 
 void	check_pr_zero(int *i, const char *str, va_list args, int *p);
 void	check_zero(int *i, const char *str, va_list args, int *p);
+void	ft_putspacepr(int s, int size, int *p);
 
 void	flags_int(va_list args, int *i);
 void	flags_oct(va_list args, int *i);
@@ -73,7 +67,6 @@ void	whitespace_flags(va_list, int *p, const char *str, int *i);
 void	ft_putspacezero(int s, int size, int *i);
 void	add_plus(int *i);
 void	plus_flags(va_list args, int *p, const char *str, int *i);
-int		width_prec_flags(t_params *args, const char *str, int *i);
 void	check_zero(int *i, const char *str, va_list args, int *p);
 void	mod_flags(int *i);
 void	mem_add_flags(va_list args, int *i);

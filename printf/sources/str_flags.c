@@ -18,7 +18,7 @@ void	str_flags(va_list args, int *i)
 	char *output;
 
 	output = va_arg(args, char*);
-	if (output == NULL)
+	if (!output)
 	{
 		*i = *i + 6;
 		write(1, "(null)", 6);
